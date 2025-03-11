@@ -1,6 +1,6 @@
 # Python Virtual Environment Manager
 
-A tool to easily manage python virtual environments in new projects.
+A tool to easily manage python virtual environments.
 
 ## TODO
 - support different python versions
