@@ -15,6 +15,8 @@ Made for macOS.
 pip install -e .
 # Standard Installation
 pip install .
+# Direct installation
+pip install git+https://github.com/lawsus/python-venv-manager.git
 
 # Uninstall the package
 pip uninstall python-venv-manager
