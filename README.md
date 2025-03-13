@@ -6,6 +6,7 @@ A tool to easily manage python virtual environments.
 - support different python versions
 - automatic venv activation/deactivation
     - I'm trying to think of good ways to do this...
+    - currently copies command to clipboard
 
 ## Notes
 Only tested on  macOS.
@@ -38,6 +39,6 @@ options:
   --delete      Delete the virtual environment.
   --reset       Reset the virtual environment by deleting and recreating it.
   --update      Update the dependencies in the virtual environment.
-  --activate    Get command to activate the virtual environment.
-  --deactivate  Get command to deactivate the virtual environment.
+  --activate    Copy command to activate the virtual environment to clipboard.
+  --deactivate  Copy command to deactivate the virtual environment to clipboard.
 ```

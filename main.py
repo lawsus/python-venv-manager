@@ -1,10 +1,14 @@
 import os
 import subprocess
 import shutil
+import pyperclip
 
 VENV_NAME = ".venv"
 REQUIREMENTS_FILE = "requirements.txt"
 OLD_REQUIREMENTS_FILE = ".requirements_old.txt"
+
+def copyCommandToClipboard(command):
+    pyperclip.copy(command)
 
 def runCommand(command):
     try:
@@ -44,8 +48,9 @@ def createVenv():
         print(f"Creating {OLD_REQUIREMENTS_FILE}.")
         shutil.copy(REQUIREMENTS_FILE, OLD_REQUIREMENTS_FILE)
 
-    print(f"Activate your venv by running")
-    print(getActivateCommand())
+    activate_command = f". {VENV_NAME}/bin/activate"
+    print(f"Activatation command has been copied to clipboard.")
+    copyCommandToClipboard(activate_command)
 
 def deleteVenv():
     if not os.path.exists(VENV_NAME):
@@ -97,7 +102,7 @@ def getActivateCommand():
     return f". {VENV_NAME}/bin/activate"
 
 def getDeactivateCommand():
-    return f"deactivate"
+    return "deactivate"
 
 def main():
     import argparse
@@ -107,8 +112,8 @@ def main():
     parser.add_argument("--delete", action="store_true", help="Delete the virtual environment.")
     parser.add_argument("--reset", action="store_true", help="Reset the virtual environment by deleting and recreating it.")
     parser.add_argument("--update", action="store_true", help="Update the dependencies in the virtual environment.")
-    parser.add_argument("--activate", action="store_true", help="Get command to activate the virtual environment.")
-    parser.add_argument("--deactivate", action="store_true", help="Get command to deactivate the virtual environment.")
+    parser.add_argument("--activate", action="store_true", help="Copy command to activate the virtual environment to clipboard.")
+    parser.add_argument("--deactivate", action="store_true", help="Copy command to deactivate the virtual environment to clipboard.")
     args = parser.parse_args()
 
     if args.create:
@@ -121,9 +126,9 @@ def main():
     elif args.update:
         updateVenv()
     elif args.activate:
-        print(getActivateCommand())
+        copyCommandToClipboard(getActivateCommand())
     elif args.deactivate:
-        print(getDeactivateCommand())
+        copyCommandToClipboard(getDeactivateCommand())
     else:
         print("No action specified. Use --help for more information.")
 
