@@ -4,10 +4,11 @@ A tool to easily manage python virtual environments.
 
 ## TODO
 - support different python versions
-- support windows
+- automatic venv activation/deactivation
+    - I'm trying to think of good ways to do this...
 
 ## Notes
-Made for macOS.
+Only tested on  macOS.
 
 ## Install/Uninstall
 ```bash
