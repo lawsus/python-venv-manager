@@ -13,11 +13,7 @@ Only tested on  macOS.
 
 ## Install/Uninstall
 ```bash
-# Development mode, changes in code will reflect
-pip install -e .
-# Standard Installation
-pip install .
-# Direct installation
+# Install the package
 pip install git+https://github.com/lawsus/python-venv-manager.git
 
 # Uninstall the package
