@@ -3,3 +3,5 @@ requirements.txt
 .requirements_old.txt
 __pycache__/
 python_venv_manager.egg-info/
+setuptools.txt
+/build

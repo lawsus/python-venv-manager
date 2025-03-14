@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-venv-manager"
+version = "0.1.0"
+description = "A tool to easily manage python virtual environments"
+dependencies = ["pyperclip"]
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.scripts]
+vem = "main:main"
