@@ -5,3 +5,4 @@ __pycache__/
 python_venv_manager.egg-info/
 setuptools.txt
 /build
+.DS_Store

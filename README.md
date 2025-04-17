@@ -9,7 +9,13 @@ A tool to easily manage python virtual environments.
     - currently copies command to clipboard
 
 ## Notes
-Only tested on  macOS.
+Only tested on macOS and Ubuntu 22.04
+
+## Requirements
+```bash
+# Important: Ensure script wheel is added to path
+pip install setuptools wheel
+```
 
 ## Install/Uninstall
 ```bash
